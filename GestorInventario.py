@@ -1,7 +1,7 @@
 import tkinter as tk
-import xlsxwriter
 from tkinter import messagebox
 from tkinter import ttk
+"""import xlsxwriter"""
 
 class InventarioApp:
     def __init__(self, root):
@@ -32,7 +32,7 @@ class InventarioApp:
         self.boton_mostrar.place(x=280,y=65)
 
     def agregar_producto(self):
-        """nombre = self.entry_nombre.get()
+        nombre = self.entry_nombre.get()
         cantidad = self.entry_cantidad.get()
 
         if nombre and cantidad:
@@ -42,15 +42,15 @@ class InventarioApp:
             messagebox.showerror("Error", "Por favor ingresa el nombre y la cantidad del producto.")
 
         self.entry_nombre.delete(0, tk.END)
-        self.entry_cantidad.delete(0, tk.END)"""
+        self.entry_cantidad.delete(0, tk.END)
 
-        archivo = xlsxwriter.workbook('Inventario.xlsx')
+        """archivo = xlsxwriter.workbook('Inventario.xlsx')
         hoja=archivo.add_worksheet()
         productos = [self.label_nombre, self.label_cantidad]
 
         for i in range(len(productos)):
             hoja.write(0,i)
-        archivo.close()
+        archivo.close()"""
 
     def mostrar_inventario(self):
         if not self.inventario:
